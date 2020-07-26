@@ -1,0 +1,53 @@
+#board, #board > div, .list-wrapper {
+  height: 100%;
+}
+#loading {
+  width: 100%;
+  text-align: center;
+  vertical-align: top;
+}
+#board {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 8px;
+}
+
+.list-wrapper {
+  width: 272px;
+  margin: 0 4px;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+#board > div, .list-wrapper {
+  display: inline-block;
+}
+
+.todo-title, .list-title {
+  cursor: move;
+}
+.drag-wrapper {
+  padding: 12px;
+  padding-bottom: 8px;
+}
+.inverted {
+  transform: scaleY(-1);
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 7px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+::-webkit-scrollbar-corner {
+  background: #bbb;
+}
