@@ -12,23 +12,8 @@ services:
       HOST: 0.0.0.0
       PORT: 8080
       NODE_ENV: development
-      VUE_APP_API_KEY: 155BB64EA407E1045E008EF53E6882D71274B5E67DA6B80E081C7D49A4C31B00
+      VUE_APP_API_KEY:
     volumes:
       - ./trello:/usr/src/app
     ports:
       - "8080:8080"
-
-  api:
-    build:
-      context: trello
-      dockerfile: Dockerfile
-    working_dir: /usr/src/app
-    command: npm run build
-    env_file: .env
-    environment:
-      NODE_ENV: production
-      VUE_APP_API_KEY: 155BB64EA407E1045E008EF53E6882D71274B5E67DA6B80E081C7D49A4C31B00
-    volumes:
-      - ./trello:/usr/src/app
-    ports:
-      - "9000:9000"
